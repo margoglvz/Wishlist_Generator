@@ -7,45 +7,49 @@ function myself() {
     pronoun = "you";
     pronoun2 = "your";
     pronoun3 = "your";
-    set();
+
+    questions = [
+        `How would ${pronoun} describe ${pronoun2}self in three words?`,
+        `What are ${pronoun3} hobbies or interests?`,
+        `Do ${pronoun} have any favorite books, movies, or TV shows?`,
+        `What kind of music do ${pronoun} enjoy listening to?`,
+        `Have ${pronoun} traveled anywhere recently? Any favorite destinations?`,
+        `Do ${pronoun} have pets? If so, what pet do ${pronoun} have?`,
+        `What's ${pronoun3} favorite type of food?`,
+        `Are ${pronoun} a morning person or a night owl?`,
+        `What's a skill ${pronoun}'ve always wanted to learn?`,
+        `If ${pronoun} could have dinner with any historical figure, who would it be?`,
+        `Do ${pronoun} have a favorite quote or mantra that inspires ${pronoun}?`];
+    
+    set(); 
 }
 
 function someoneElse() {
     pronoun = "they";
     pronoun2 = "them";
     pronoun3 = "their"; 
-    set();
+    
+    questions = [
+        `How would ${pronoun} describe ${pronoun2}self in three words?`,
+        `What are ${pronoun3} hobbies or interests?`,
+        `Do ${pronoun} have any favorite books, movies, or TV shows?`,
+        `What kind of music do ${pronoun} enjoy listening to?`,
+        `Have ${pronoun} traveled anywhere recently? Any favorite destinations?`,
+        `Do ${pronoun} have pets? If so, what pet do ${pronoun} have?`,
+        `What's ${pronoun3} favorite type of food?`,
+        `Are ${pronoun} a morning person or a night owl?`,
+        `What's a skill ${pronoun}'ve always wanted to learn?`,
+        `If ${pronoun} could have dinner with any historical figure, who would it be?`,
+        `Do ${pronoun} have a favorite quote or mantra that inspires ${pronoun}?`];
+    
+    set(); 
 }
 
 let answers = [
 
 ]
 
-let questions = [
-`How would ${pronoun} describe ${pronoun2}self in three words?`,
-`What are ${pronoun3} hobbies or interests?`,
-`Do ${pronoun} have any favorite books, movies, or TV shows?`,
-`What kind of music do ${pronoun} enjoy listening to?`,
-`Have ${pronoun} traveled anywhere recently? Any favorite destinations?`,
-`Do ${pronoun} have pets? If so, what pet do ${pronoun} have?`,
-`What's ${pronoun3} favorite type of food?`,
-`Are ${pronoun} a morning person or a night owl?`,
-`What's a skill ${pronoun}'ve always wanted to learn?`,
-`If ${pronoun} could have dinner with any historical figure, who would it be?`,
-`Do ${pronoun} have a favorite quote or mantra that inspires ${pronoun}?`];
-
-let questions1 = [
-    "hi",
-    "bye",
-    "gogo",
-    "hi",
-    "bye",
-    "gogo",
-    "hi",
-    "bye",
-    "gogo",
-    "hi",
-    "bye"];
+let questions = [];
 
 const priceQuestion = "What is the price range of your project?"; 
 
@@ -90,9 +94,13 @@ function updateQuiz(num) {
 
 
 function set() {
-    //answers.append(Document.getElementById(`ans${qnum}`)); 
+    if (qnum == 0 | qnum == 7) {
+        answers.push("");
+    } else {
+        answers.push(document.getElementById(`ans${qnum}`).value); 
+    }
     qnum = qnum + 1;
-    if (qnum < 11) {
+    if (qnum < questions.length) {
         updateQuiz(qnum); 
     } else {
         loadEnd(); 
@@ -105,6 +113,7 @@ function loaded() {
 }
 
 function loadEnd() {
+    localStorage.setItem("answers", answers); 
     window.location = 'wish_end.html';
 }
 
