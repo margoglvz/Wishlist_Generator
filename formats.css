@@ -1,22 +1,64 @@
-html{
-    background-color: #FFEBD8;
+:root{
+    --main_color: #FFEBD8;
 }
 
+html{
+    background-color: var(--main_color);
+    background: radial-gradient(#FFEBD8, #FFC5C5);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+
+.column {
+    flex: 50%;
+    padding: 0 4px;
+  }
+  
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 250px;
+}
+
+
 button{
-    display: grid;
-    background-color: #FFC5C5;
-    font-size: 40px;
-    align-items: center;
+    display: block;
+    background-color: #FFEBD8;
+    text-align:center;
+    margin: 0 auto;
+    border-width: 2px;
+    border-radius: 10px;
+    font-size: 25px;
     padding: 10px;
+}
+
+button:hover{
+    background-color: #faeee2;
+    border-color: #FFC5C5;
+    border-width: 2px;
+    border-radius: 10px;
 }
 
 h1{
     display: grid;
     text-align: center;
-    font-size: 35px;
+    font-size: 60px;
+    margin-bottom: -20px;
+    padding-top: 18%;
+}
+
+h5{
+    text-align: center;
+    font-size: 18px;
 }
 
 h6{
+    margin-bottom: -5px;
     text-align:center;
-    font-size: 20px
+    font-size: 24px
 }
