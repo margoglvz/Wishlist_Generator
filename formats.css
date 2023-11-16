@@ -1,7 +1,12 @@
+:root{
+    --main_color: #FFEBD8;
+}
+
 html{
-    background-color: #FFEBD8;
+    background-color: var(--main_color);
     background: radial-gradient(#FFEBD8, #FFC5C5);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    grid-template-columns: auto auto auto auto;
 }
 
 button{
@@ -16,6 +21,7 @@ button{
 }
 
 button:hover{
+    background-color: #faeee2;
     border-color: #FFC5C5;
     border-width: 2px;
     border-radius: 10px;
@@ -25,16 +31,17 @@ h1{
     display: grid;
     padding-top: 20%;
     text-align: center;
-    font-size: 45px;
+    font-size: 60px;
+    margin-bottom: -20px;
 }
 
 h5{
-    text-align:center;
-    font-size: 16px;
+    text-align: center;
+    font-size: 18px;
 }
 
 h6{
-    margin-bottom: -15px;
+    margin-bottom: -5px;
     text-align:center;
-    font-size: 20px
+    font-size: 24px
 }
