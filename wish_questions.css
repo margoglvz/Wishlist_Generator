@@ -15,7 +15,7 @@ button{
     background-color: #FFEBD8;
     border-radius: 15px;
     border-color: #FFC5C5;
-    border-width: 4px;
+    border-width: 3px;
     font-size: 20px;
     margin-top: 10px;
     padding: 10px;
@@ -25,7 +25,7 @@ button{
 button:hover{
     background-color: #faeee2;
     border-color: #FFC5C5;
-    border-width: 4px;
+    border-width: 3px;
     border-radius: 10px;
 }
 
