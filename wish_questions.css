@@ -1,1 +1,40 @@
-/* css stuff here
+
+
+html{
+    background: radial-gradient(#C7DCA7, #89B9AD);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#quiz{
+    padding-top: 20%;
+    text-align: center;
+}
+
+button{
+    height: 50px;
+    background-color: #FFEBD8;
+    border-radius: 15px;
+    border-color: #FFC5C5;
+    border-width: 4px;
+    font-size: 20px;
+    margin-top: 10px;
+    padding: 10px;
+    
+}
+
+button:hover{
+    background-color: #faeee2;
+    border-color: #FFC5C5;
+    border-width: 4px;
+    border-radius: 10px;
+}
+
+h1{
+    background-color: #FFEBD8;
+    padding: 20px;
+    padding-left: 5px;
+    margin-left: 20%;
+    margin-right: 20%;
+    border-radius: 20px;
+    box-shadow: gray;
+}
