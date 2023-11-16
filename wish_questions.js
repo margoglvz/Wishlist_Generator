@@ -1,45 +1,110 @@
 const initialQuestion = "Is this gift for you or somebody else?"; 
+let pronoun = ""; 
+let pronoun2 = ""; 
+let pronoun3 = ""; 
+
+function myself() {
+    pronoun = "you";
+    pronoun2 = "your";
+    pronoun3 = "your";
+    set();
+}
+
+function someoneElse() {
+    pronoun = "they";
+    pronoun2 = "them";
+    pronoun3 = "their"; 
+    set();
+}
+
+let answers = [
+
+]
 
 let questions = [
-"How would you describe yourself in three words?",
-"What are your hobbies or interests?",
-"Do you have any favorite books, movies, or TV shows?",
-"What kind of music do you enjoy listening to?",
-"Have you traveled anywhere recently? Any favorite destinations?",
-"Do you have pets? If so, what pet do you have?",
-"What's your favorite type of food?",
-"Are you a morning person or a night owl?",
-"What's a skill you've always wanted to learn?",
-"If you could have dinner with any historical figure, who would it be?",
-"Do you have a favorite quote or mantra that inspires you?"]; 
+`How would ${pronoun} describe ${pronoun2}self in three words?`,
+`What are ${pronoun3} hobbies or interests?`,
+`Do ${pronoun} have any favorite books, movies, or TV shows?`,
+`What kind of music do ${pronoun} enjoy listening to?`,
+`Have ${pronoun} traveled anywhere recently? Any favorite destinations?`,
+`Do ${pronoun} have pets? If so, what pet do ${pronoun} have?`,
+`What's ${pronoun3} favorite type of food?`,
+`Are ${pronoun} a morning person or a night owl?`,
+`What's a skill ${pronoun}'ve always wanted to learn?`,
+`If ${pronoun} could have dinner with any historical figure, who would it be?`,
+`Do ${pronoun} have a favorite quote or mantra that inspires ${pronoun}?`];
+
+let questions1 = [
+    "hi",
+    "bye",
+    "gogo",
+    "hi",
+    "bye",
+    "gogo",
+    "hi",
+    "bye",
+    "gogo",
+    "hi",
+    "bye"];
 
 const priceQuestion = "What is the price range of your project?"; 
 
 let qnum = 0; 
 
+function askFirst() {
+    document.getElementById('quiz').innerHTML += `
+    <div>
+        <h1>${initialQuestion}</h1>
+        <button onclick="myself()">Myself</button>
+        <button onclick="someoneElse()">Someone else</button>
+    </div>
+`;
+
+}
+
 function updateQuiz(num) {
+    document.getElementById('quiz').innerHTML = ""; 
+
     document.getElementById('quiz').innerHTML += `
     <div>
         <h1>${questions[num]}</h1>
-        <button onclick="click()">CLICK ME</button>
+    </div>
+`
+    if (num == 7) {
+        document.getElementById('quiz').innerHTML += `
+    <div>
+        <button onclick="set()">Morning Person</button>
+        <button onclick="set()">Night Owl</button>
     </div>
 `;
+    } else {
+        document.getElementById('quiz').innerHTML += `
+    <div>
+        <input id="ans${num}" type="text"></input>
+        <button onclick="set()">Submit</button>
+    </div>
+`;
+
+    }
 }
 
 
-function click() {
-    console.log("hi"); 
+function set() {
+    //answers.append(Document.getElementById(`ans${qnum}`)); 
     qnum = qnum + 1;
-    updateQuiz(qnum); 
+    if (qnum < 11) {
+        updateQuiz(qnum); 
+    } else {
+        loadEnd(); 
+    }
+    
 }
-
-
 
 function loaded() {
-    updateQuiz(qnum); 
+    askFirst(); 
 }
 
-if (qnum == questions.length) {
-    window.location = 'wish.end.html';
+function loadEnd() {
+    window.location = 'wish_end.html';
 }
 
