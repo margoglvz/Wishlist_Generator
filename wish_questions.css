@@ -9,12 +9,13 @@ html{
     display: flex; 
     margin-top: 15%;
     text-align: center;
+    
     flex-direction: column; 
 }
 
 button{
     margin-top: 5%; 
-    height: 50px;
+    height: 55px;
     background-color: #FFEBD8;
     border-radius: 15px;
     border-color: #FFC5C5;
@@ -38,6 +39,8 @@ h1{
     padding-left: 20px;
     margin-left: 20%;
     margin-right: 20%;
+    border-radius: 40px;
+    margin-bottom: 5%;
     border-radius: 20px;
     box-shadow: gray;
 }
@@ -45,7 +48,7 @@ h1{
 input {
     margin-top: 5%; 
     width: 40vw;
-    height: 7vh;
+    height: 4vh;
     border-radius: 10px;
     font-size: 20px; 
 }
