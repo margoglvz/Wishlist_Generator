@@ -84,8 +84,7 @@ function updateQuiz(num) {
     } else {
         document.getElementById('quiz').innerHTML += `
     <div>
-        <input id="ans${num}" type="text"></input>
-        <button onclick="set()">Submit</button>
+        <input id="ans${num}" type="text"</input>
     </div>
 `;
 
@@ -102,23 +101,51 @@ function set() {
     qnum = qnum + 1;
     if (qnum < questions.length) {
         updateQuiz(qnum); 
-    } else {
-        loadEnd(); 
-    }
-    
+    } 
+    else {
+        askFinal(); 
+    } 
+}
+
+function askFinal() {
+    document.getElementById('quiz').innerHTML = ""; 
+
+    document.getElementById('quiz').innerHTML += `
+    <div>
+        <h1>${priceQuestion}</h1>
+    </div>
+
+    <div>
+        <button onclick="loadEnd()">$0-$25</button>
+        <button onclick="loadEnd()">$25-$50</button>
+        <button onclick="loadEnd()">$50-$100</button>
+        <button onclick="loadEnd()">$100+</button>
+    </div>
+    `; 
+
+    document.addEventListener("keyup", (event) => {
+        if (event.key == "Enter") {
+            loadEnd(); 
+        }
+    }); 
 }
 
 document.addEventListener("keyup", (event) => {
-    if (event.key == "enter") {
+    if (event.key == "Enter") {
         set(); 
     }
 }); 
+
+function setPrice() {
+    price = document.getElementById("price").value;
+}
 
 function loaded() {
     askFirst(); 
 }
 
 function loadEnd() {
+    localStorage.setItem("answers", answers); 
     localStorage.setItem("answers", answers); 
     window.location = 'wish_end.html';
 }
