@@ -6,19 +6,21 @@ html{
 }
 
 #quiz{
-    padding-top: 20%;
+    display: flex; 
+    margin-top: 15%;
     text-align: center;
     
+    flex-direction: column; 
 }
 
 button{
+    margin-top: 5%; 
     height: 50px;
     background-color: #FFEBD8;
     border-radius: 15px;
     border-color: #FFC5C5;
     border-width: 3px;
     font-size: 20px;
-    margin-top: 10px;
     padding: 10px;
     
 }
@@ -31,11 +33,22 @@ button:hover{
 }
 
 h1{
+    font-size: 40px; 
     background-color: #FFEBD8;
-    padding: 20px;
-    padding-left: 5px;
+    padding: 30px;
+    padding-left: 20px;
     margin-left: 20%;
     margin-right: 20%;
     border-radius: 40px;
     margin-bottom: 5%;
+    border-radius: 20px;
+    box-shadow: gray;
+}
+
+input {
+    margin-top: 5%; 
+    width: 40vw;
+    height: 7vh;
+    border-radius: 10px;
+    font-size: 20px; 
 }
