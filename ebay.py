@@ -97,7 +97,7 @@ def run(query:str) -> None:
         
     url = "https://api.ebay.com/buy/browse/v1/item_summary/search"
 
-    querystring = {"q":query}
+    querystring = {"q":query, "limit": 3}
 
     payload = ""
     headers = {

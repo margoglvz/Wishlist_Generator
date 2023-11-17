@@ -124,6 +124,7 @@ function updateQuiz(num) {
 
 
 function set() {
+    console.log(answers)
     if (qnum == 0 | qnum == 7) {
         //nothing happens
     } else {
@@ -196,8 +197,8 @@ function play_audio(){
 }
 
 function loadEnd() {
-    localStorage.setItem("answers", answers); 
-    localStorage.setItem("answers", answers); 
+    // localStorage.setItem("answers", answers); 
+    localStorage.setItem("answers", JSON.stringify(answers)); 
     window.location = 'wish_end.html';
 }
 

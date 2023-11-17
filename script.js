@@ -13,4 +13,12 @@ function search() {
     fetch("http://127.0.0.1:5000/get/" + show + ' ' + color).then(res => res.json()).then(response => {
         document.getElementById('display').innerHTML = JSON.stringify(response);
     })
+
+    fetch("http://127.0.0.1:5000/get/" + show + ' ' + color).then(res => res.json()).then(response => {
+        document.getElementById('display').innerHTML = JSON.stringify(response);
+    })
+
+    fetch("http://127.0.0.1:5000/get/" + show + ' ' + color).then(res => res.json()).then(response => {
+        document.getElementById('display').innerHTML = JSON.stringify(response);
+    })
 }
