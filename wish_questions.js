@@ -145,6 +145,7 @@ function loaded() {
 
 }
 
+
 var audio = new Audio('./neon_gaming.mp3'); 
 var isPlaying = false; 
 
