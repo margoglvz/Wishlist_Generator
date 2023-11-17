@@ -95,7 +95,7 @@ function updateQuiz(num) {
 
 function set() {
     if (qnum == 0 | qnum == 7) {
-        answers.push("");
+        //nothing happens
     } else {
         answers.push(document.getElementById(`ans${qnum}`).value); 
     }
@@ -107,6 +107,13 @@ function set() {
     }
     
 }
+
+document.addEventListener("keyup", (event) => {
+    if (event.key == "enter") {
+        console.log("meow"); 
+        set(); 
+    }
+}); 
 
 function loaded() {
     askFirst(); 
