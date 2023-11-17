@@ -15,7 +15,7 @@ html{
 
 button{
     margin-top: 5%; 
-    height: 50px;
+    height: 55px;
     background-color: #FFEBD8;
     border-radius: 15px;
     border-color: #FFC5C5;
@@ -48,7 +48,7 @@ h1{
 input {
     margin-top: 5%; 
     width: 40vw;
-    height: 7vh;
+    height: 4vh;
     border-radius: 10px;
     font-size: 20px; 
 }
