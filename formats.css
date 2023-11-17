@@ -29,10 +29,11 @@ html{
 button{
     display: block;
     background-color: #FFEBD8;
-    text-align:center;
+    text-align: center;
     margin: 0 auto;
-    border-width: 2px;
-    border-radius: 10px;
+    border-width: 3px;
+    border-color: #FFC5C5;
+    border-radius: 15px;
     font-size: 25px;
     padding: 10px;
 }
@@ -40,16 +41,19 @@ button{
 button:hover{
     background-color: #faeee2;
     border-color: #FFC5C5;
-    border-width: 2px;
+    border-width: 3px;
     border-radius: 10px;
 }
 
 h1{
     display: grid;
     text-align: center;
+    text-shadow: black;
     font-size: 61px;
     margin-bottom: -20px;
-    padding-top: 18%;
+    margin-top: 20%;
+    padding-left: 0px;
+    padding-top: 20px;
 }
 
 h5{
