@@ -173,6 +173,26 @@ function setPrice() {
 
 function loaded() {
     askFirst(); 
+
+}
+
+var audio = new Audio('./neon_gaming.mp3'); 
+var isPlaying = false; 
+
+function play_audio(){   
+
+
+    if (audio.onplaying) {
+        isPlaying = true; 
+    } else if (audio.onpause) {
+        isPlaying = false; 
+    }
+
+    if (isPlaying) {
+        audio.pause();
+    } else {
+        audio.play(); 
+    }
 }
 
 function loadEnd() {
