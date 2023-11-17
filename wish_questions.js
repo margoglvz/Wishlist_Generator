@@ -45,6 +45,37 @@ function someoneElse() {
     set(); 
 }
 
+function morningPerson() {
+    answers.push("morning person"); 
+    set(); 
+}
+
+function nightOwl() {
+    answers.push("night owl"); 
+    set(); 
+}
+
+function price1() {
+    answers.push("price range 1");
+    loadEnd(); 
+}
+
+function price2() {
+    answers.push("price range 2");
+    loadEnd(); 
+}
+
+function price3() {
+    answers.push("price range 3");
+    loadEnd(); 
+}
+
+function price4() {
+    answers.push("price range 4");
+    loadEnd(); 
+}
+
+
 let answers = [
 
 ]
@@ -77,8 +108,8 @@ function updateQuiz(num) {
     if (num == 7) {
         document.getElementById('quiz').innerHTML += `
     <div>
-        <button onclick="set()">Morning Person</button>
-        <button onclick="set()">Night Owl</button>
+        <button onclick="morningPerson()">Morning Person</button>
+        <button onclick="nightOwl()">Night Owl</button>
     </div>
 `;
     } else {
@@ -116,10 +147,10 @@ function askFinal() {
     </div>
 
     <div>
-        <button onclick="loadEnd()">$0-$25</button>
-        <button onclick="loadEnd()">$25-$50</button>
-        <button onclick="loadEnd()">$50-$100</button>
-        <button onclick="loadEnd()">$100+</button>
+        <button onclick="price1()">$0-$25</button>
+        <button onclick="price2()">$25-$50</button>
+        <button onclick="price3()">$50-$100</button>
+        <button onclick="price4()">$100+</button>
     </div>
     `; 
 
