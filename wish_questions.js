@@ -110,7 +110,6 @@ function set() {
 
 document.addEventListener("keyup", (event) => {
     if (event.key == "enter") {
-        console.log("meow"); 
         set(); 
     }
 }); 
